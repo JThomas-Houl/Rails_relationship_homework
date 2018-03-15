@@ -1,0 +1,27 @@
+<%= form_with(model: gp, local: true) do |form| %>
+  <% if gp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gp.errors.count, "error") %> prohibited this gp from being saved:</h2>
+
+      <ul>
+      <% gp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :gp_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appointment %>
+    <%= form.text_field :appointment, id: :gp_appointment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
