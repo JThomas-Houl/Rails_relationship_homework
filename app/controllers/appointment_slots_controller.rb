@@ -69,6 +69,6 @@ class AppointmentSlotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_slot_params
-      params.require(:appointment_slot).permit(:time, :patient, :symptom)
+      params.require(:appointment_slot).permit(:time, :patient, :symptom, :gp_id)
     end
 end

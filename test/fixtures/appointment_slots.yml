@@ -4,8 +4,10 @@ one:
   time: MyString
   patient: MyString
   symptom: MyString
+  gp_id: MyString
 
 two:
   time: MyString
   patient: MyString
   symptom: MyString
+  gp_id: MyString

@@ -17,7 +17,7 @@ class AppointmentSlotsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create appointment_slot" do
     assert_difference('AppointmentSlot.count') do
-      post appointment_slots_url, params: { appointment_slot: { patient: @appointment_slot.patient, symptom: @appointment_slot.symptom, time: @appointment_slot.time } }
+      post appointment_slots_url, params: { appointment_slot: { gp_id: @appointment_slot.gp_id, patient: @appointment_slot.patient, symptom: @appointment_slot.symptom, time: @appointment_slot.time } }
     end
 
     assert_redirected_to appointment_slot_url(AppointmentSlot.last)
@@ -34,7 +34,7 @@ class AppointmentSlotsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update appointment_slot" do
-    patch appointment_slot_url(@appointment_slot), params: { appointment_slot: { patient: @appointment_slot.patient, symptom: @appointment_slot.symptom, time: @appointment_slot.time } }
+    patch appointment_slot_url(@appointment_slot), params: { appointment_slot: { gp_id: @appointment_slot.gp_id, patient: @appointment_slot.patient, symptom: @appointment_slot.symptom, time: @appointment_slot.time } }
     assert_redirected_to appointment_slot_url(@appointment_slot)
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315220228) do
+ActiveRecord::Schema.define(version: 20180315224929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180315220228) do
     t.string "time"
     t.string "patient"
     t.string "symptom"
+    t.string "gp_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

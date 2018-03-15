@@ -15,5 +15,10 @@
   <%= @appointment_slot.symptom %>
 </p>
 
+<p>
+  <strong>Gp:</strong>
+  <%= @appointment_slot.gp_id %>
+</p>
+
 <%= link_to 'Edit', edit_appointment_slot_path(@appointment_slot) %> |
 <%= link_to 'Back', appointment_slots_path %>
