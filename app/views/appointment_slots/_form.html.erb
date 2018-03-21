@@ -1,0 +1,37 @@
+<%= form_with(model: appointment_slot, local: true) do |form| %>
+  <% if appointment_slot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment_slot.errors.count, "error") %> prohibited this appointment_slot from being saved:</h2>
+
+      <ul>
+      <% appointment_slot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.text_field :time, id: :appointment_slot_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :patient %>
+    <%= form.text_field :patient, id: :appointment_slot_patient %>
+  </div>
+
+  <div class="field">
+    <%= form.label :symptom %>
+    <%= form.text_field :symptom, id: :appointment_slot_symptom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gp_id %>
+    <%= form.text_field :gp_id, id: :appointment_slot_gp_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

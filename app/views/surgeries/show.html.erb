@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gp name:</strong>
+  <%= @surgery.GP_name %>
+</p>
+
+<p>
+  <strong>Gp age:</strong>
+  <%= @surgery.GP_age %>
+</p>
+
+<p>
+  <strong>Gp gender:</strong>
+  <%= @surgery.GP_gender %>
+</p>
+
+<%= link_to 'Edit', edit_surgery_path(@surgery) %> |
+<%= link_to 'Back', surgeries_path %>
